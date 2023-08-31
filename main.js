@@ -138,7 +138,42 @@ function my_keydown(e) {
     if (keyPressed == "67") {
         new_image('cloud.jpg');
         console.log("c");
-    }
-    
-    
+    }  
 }
+
+function up() {
+    if(player_y >= 0) {
+    player_y -= block_size;
+    console.log("Up was pressed, new x and y: " + player_x + ", " + player_y);
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
+function down() {
+    if(player_y <= 700) {
+    player_y += block_size;
+    console.log("Down was pressed, new x and y: " + player_x + ", " + player_y);
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
+function left() {
+    if(player_x >= 0) {
+    player_x -= block_size;
+    console.log("Left was pressed, new x and y: " + player_x + ", " + player_y);
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
+function right() {
+    if(player_x <= 900) {
+    player_y += block_size;
+    console.log("Right was pressed, new x and y: " + player_x + ", " + player_y);
+    canvas.remove(player_object);
+    player_update();
+    }
+}
+
