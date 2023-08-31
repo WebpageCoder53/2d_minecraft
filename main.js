@@ -85,22 +85,18 @@ function my_keydown(e) {
     if(keyPressed=='38') {
         up();
         console.log("up");
-        player_update();
     }
     if(keyPressed=='40') {
         down();
         console.log("down");
-        player_update();
     }
     if(keyPressed=='37') {
         left();
         console.log("left");
-        player_update();
     }
     if(keyPressed=='39') {
         right();
         console.log("right");
-        player_update();
     }
     
     if (keyPressed == "87") {
@@ -170,7 +166,7 @@ function left() {
 
 function right() {
     if(player_x <= 900) {
-    player_y += block_size;
+    player_x += block_size;
     console.log("Right was pressed, new x and y: " + player_x + ", " + player_y);
     canvas.remove(player_object);
     player_update();
